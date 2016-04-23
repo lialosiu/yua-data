@@ -18,3 +18,4 @@ return $a * 2;
 
 sdfsdf  `code`
 
+![test](2014-09-25-145600.jpg)
