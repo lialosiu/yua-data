@@ -8,7 +8,7 @@ date: 2015-08-28 16:14:43
 
 然而没想到回滚完成后，好几个 Appx 应用都出问题了，应用名显示为 `@{microsoft.windowscommunicationsapps_17.6120.42011.0_x64__8wekyb3d8bbwe}` 类似这样的形式。
 
-{% asset_img 000.jpg [000.jpg] %}
+![000.jpg](000.jpg)
 
 出问题的应用分别为 Edge、日历与邮件、应用商店、Cortana，其中 Edge 和 Cortana 只是名字没了Icon没了，商店则是变成了英文菜单，日历与邮件则是直接打开不能、更新不能、卸载不能、完全拿他没办法。
 
@@ -20,7 +20,7 @@ date: 2015-08-28 16:14:43
 
 试着跑了下系统自带的`疑难解答`，然而它提示说……
 
-{% asset_img 001.jpg [001.jpg] %}
+![001.jpg](001.jpg)
 
 |дﾟ)
 
@@ -40,13 +40,13 @@ Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$(
 
 然而还是有两个坏掉的图标……
 
-{% asset_img 002.jpg [002.jpg] %}
+![002.jpg](002.jpg)
 
 日历与邮件还是不行\_(:3」∠)\_
 
 瞄了一眼 Powershell，发现有报错
 
-{% asset_img 003.jpg [003.jpg] %}
+![003.jpg](003.jpg)
 
 咦，`C:\` 在C盘根目录找是什么鬼
 
@@ -56,7 +56,7 @@ Get-AppXPackage | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$(
 Get-AppxPackage microsoft.windowscommunicationsapps*
 ```
 
-{% asset_img 004.jpg [004.jpg] %}
+![004.jpg](004.jpg)
 
 妈了个鸡，为何 InstallLocation 不见了……
 
@@ -65,7 +65,7 @@ cd "C:\Program Files\WindowsApps\"
 ls
 ```
 
-{% asset_img 005.jpg [005.jpg] %}
+![005.jpg](005.jpg)
 
 妈了个蛋，还真没了这个文件夹……
 
@@ -121,6 +121,6 @@ ok，卸掉
 
 然后商店重新安装
 
-{% asset_img 006.jpg [006.jpg] %}
+![006.jpg](006.jpg)
 
 卧槽 教练这波不亏 (´・ω・`)
