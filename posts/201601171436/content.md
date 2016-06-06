@@ -10,7 +10,7 @@ date: 2016-01-17 14:36
 
 然而今天又出现了新状况，也是瞬间高并发的锅。
 
-[![20160117221844](http://lialosiu.com/wp-content/uploads/2016/01/20160117221844-1024x875.jpg)](http://lialosiu.com/wp-content/uploads/2016/01/20160117221844.jpg)
+![20160117221844.jpg](20160117221844.jpg)
 
 如图，这是在ngjs下的一个并发上传的控件，会同时并发上传选择的文件，且在上传前会并发请求以查询文件是否已上传，以完成续传功能。
 
@@ -18,7 +18,7 @@ date: 2016-01-17 14:36
 
 在这几个并发连接中，有部分会发生错误，扔我一脸500
 
-[![20160117222400](http://lialosiu.com/wp-content/uploads/2016/01/20160117222400.jpg)](http://lialosiu.com/wp-content/uploads/2016/01/20160117222400.jpg)
+![20160117222400](20160117222400.jpg)
 
 具体报错是^
 
@@ -26,12 +26,12 @@ date: 2016-01-17 14:36
 
 而且我.env文件中数据库相关的设置是：
 
-    
+```ini
     DB_HOST=localhost
     DB_DATABASE=amaoto-core
     DB_USERNAME=root
     DB_PASSWORD=
-
+```
 
 然而报错是说我用了forge作为用户名连接mysql
 
@@ -43,7 +43,7 @@ date: 2016-01-17 14:36
 
 检查config/database.php
 
-    
+```php
     'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
@@ -55,7 +55,7 @@ date: 2016-01-17 14:36
             'prefix'    => '',
             'strict'    => false,
         ]，
-
+```
 
 果然
 
