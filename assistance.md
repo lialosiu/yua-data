@@ -25,3 +25,5 @@ title: 永久应援
 [![アストラエアの白き永遠 応援中！！](http://www.favo-soft.jp/soft/product/WhiteEternity/banner/ex_banner_A.jpg)](http://www.favo.co.jp/)
 
 [![紅い瞳に映るセカイ 応援中！！](http://www.favo-soft.jp/soft/product/WorldsEndLove/banner/ex_banner.jpg)](http://www.favo.co.jp/)
+
+[![まいてつ](http://www.lose.jp/official/wp-content/uploads/2015/10/bunner_780_260_main.jpg)](http://www.lose.jp/)
